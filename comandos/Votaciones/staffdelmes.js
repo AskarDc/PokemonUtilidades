@@ -10,6 +10,8 @@ module.exports = {
     .addStringOption(option => option.setName('razon').setDescription(`Por qué razón deseas que gane?`).setRequired(true)),
     async execute (interaction) {
 
+        if(!interaction.member.roles.cache.has("979315821518159893")) return interaction.reply({ content: "No tienes suficientes permisos.", ephemeral: true })
+
         await interaction.reply({ content: "Anotado tu votación <:Pk_XDUwU:1001580231531966574>", ephemeral: true});
 
         const staff = interaction.options.getString('staff')

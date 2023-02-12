@@ -8,6 +8,8 @@ module.exports = {
     once: true,
     async execute(client) {
 
+
+        
         console.log(`Evento ready preparado! ${client.user.tag}`);
 
         //if (!mongodbURL) return;
@@ -23,9 +25,9 @@ module.exports = {
         //}
 
         const activities = [
-            'mencioname ^^',
-            'dev !Zer0 🥀|ᵖᵏ', 
-            'en mantenimiento'
+            'siendo de utilidad',
+            'dev team', 
+            'en mantenimiento constante'
         ];
 
         setInterval(() => {

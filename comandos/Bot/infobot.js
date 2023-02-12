@@ -7,6 +7,9 @@ module.exports = {
     .setDescription("Devuelve la información acerca del bot."),
 
     execute(interaction, client) {
+
+        if(!interaction.member.roles.cache.has("979315821518159893")) return interaction.reply({ content: "No tienes suficientes permisos.", ephemeral: true })
+        
         const dias = Math.floor(client.uptime / 86400000)
         const horas = Math.floor(client.uptime / 3600000) % 24
         const minutos = Math.floor(client.uptime / 60000) & 60

@@ -11,10 +11,14 @@ const {
       .setName("ayuda")
       .setDescription("Te devuelve una lista con los comandos del bot."),
     async execute(interaction) {
+
+      if(!interaction.member.roles.cache.has("979315821518159893")) return interaction.reply({ content: "No tienes suficientes permisos.", ephemeral: true })
+
       const emojis = {
-        info: "📝",
-        moderation: "🛠️",
-        general: "⚙️",
+        bot: "1074133200877650020",
+        nekotina: "1074137675835129956",
+        utilidad: "1074137802620551321",
+        votaciones: "1074137958061449226",
       };
   
       const directories = [
@@ -43,9 +47,11 @@ const {
       });
   
       const embed = new EmbedBuilder()
-        .setTitle("Hola wenas")
-        .setDescription("Sexo");
-  
+        .setAuthor({ name: 'Shui Utilidades', iconURL: 'https://media.discordapp.net/attachments/979331923547652126/1074122242247630869/Logo_parte_1.png?width=238&height=234url', url: 'https://discord.gg/pokemon-kingdom' })
+        .setTitle("<a:Okay:1074133200877650020> Lista de Comandos de Shui Utilities")
+        .setDescription("<a:Estrellas4:1074117320865230919> **〉Información**\n> <a:Estrellas5:1074117495079833703> **Shui Utilities** solo tiene uso para miembros del staff de Pokémon Kingdom con varias funcionalidad para mejor uso y manejo de sistemas normalmente usados en el servidor.\n\n***`- Cualquier tipo de filtración del uso de este sistema puede acabar en expulsión del Staff.`***")
+        .setColor("#ff5151")
+        .setFooter({ text: `Desarrollado por Developers de Pokémon Kingdom` });
       const components = (state) => [
         new ActionRowBuilder().addComponents(
           new StringSelectMenuBuilder()
@@ -85,7 +91,7 @@ const {
         );
   
         const categoryEmbed = new EmbedBuilder()
-          .setColor('Random')
+          .setColor('#ff5151')
           .setTitle(`${formatString(directory)} comandos`)
           .setDescription(
             `Lista de comandos del directorio ${directory}`

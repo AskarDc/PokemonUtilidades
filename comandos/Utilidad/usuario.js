@@ -10,6 +10,9 @@ module.exports = {
             .setRequired(true)
         ),
         async execute(interaction) {
+
+            if(!interaction.member.roles.cache.has("979315821518159893")) return interaction.reply({ content: "No tienes suficientes permisos.", ephemeral: true })
+            
             let user = interaction.options.getUser('usuario');
             const miembro = await interaction.guild.members.fetch(user.id);
 

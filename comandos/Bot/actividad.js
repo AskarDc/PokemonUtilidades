@@ -6,6 +6,9 @@ module.exports = {
     .setDescription("Enseña el tiempo que el bot lleva encendido."),
 
     async execute(interaction, client) {
+
+        if(!interaction.member.roles.cache.has("979315821518159893")) return interaction.reply({ content: "No tienes suficientes permisos.", ephemeral: true })
+        
         const dias = Math.floor(client.uptime / 86400000)
         const horas = Math.floor(client.uptime / 3600000) % 24
         const minutos = Math.floor(client.uptime / 60000) & 60
