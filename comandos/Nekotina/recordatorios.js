@@ -6,7 +6,7 @@ module.exports = {
         .setDescription(`Este es un ejemplo de la guía`),
         async execute(interaction) {
 
-            if(!interaction.member.roles.cache.has("979315821518159893")) return interaction.reply({ content: "No tienes suficientes permisos.", ephemeral: true })
+            if(!interaction.member.roles.cache.has("914653209535074376")) return interaction.reply({ content: "No tienes suficientes permisos.", ephemeral: true })
 
             const embed = new EmbedBuilder()
             .setColor("Random")

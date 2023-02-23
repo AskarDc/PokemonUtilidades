@@ -25,8 +25,8 @@ module.exports = {
             const embed = new EmbedBuilder()
 
             .setTitle("<:Wow:1065393115470516244> Información acerca del bot")
-            .setColor("#df08fc")
-            .setThumbnail('https://media.discordapp.net/attachments/1055255744238321678/1065384469294489741/e3a0ac988babeb7bb8c05083acc0c7ec.jpg?width=473&height=473')
+            .setColor("#fcb56d")
+            .setThumbnail('https://images-ext-1.discordapp.net/external/b28bh76epnYD28oXZuWhhJHIsCwwOWlfpcxBrE5rb1k/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/1073750578750029825/62f8bf03ac71676d2096ddbcb33d1f3f.png?width=473&height=473')
             .addFields(
                 { name: "<:Dev:1065385607775408148> Desarrollador", value: "! Zer0 🥀 |ᵖᵏ#9999", inline: true },
                 { name: "<:Miembro:1065385705548828762> Usuario", value: `${client.user.username}`, inline: true },

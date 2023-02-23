@@ -50,7 +50,7 @@ const {
         .setAuthor({ name: 'Shui Utilidades', iconURL: 'https://media.discordapp.net/attachments/979331923547652126/1074122242247630869/Logo_parte_1.png?width=238&height=234url', url: 'https://discord.gg/pokemon-kingdom' })
         .setTitle("<a:Okay:1074133200877650020> Lista de Comandos de Shui Utilities")
         .setDescription("<a:Estrellas4:1074117320865230919> **〉Información**\n> <a:Estrellas5:1074117495079833703> **Shui Utilities** solo tiene uso para miembros del staff de Pokémon Kingdom con varias funcionalidad para mejor uso y manejo de sistemas normalmente usados en el servidor.\n\n***`- Cualquier tipo de filtración del uso de este sistema puede acabar en expulsión del Staff.`***")
-        .setColor("#ff5151")
+        .setColor("#fcb56d")
         .setFooter({ text: `Desarrollado por Developers de Pokémon Kingdom` });
       const components = (state) => [
         new ActionRowBuilder().addComponents(
@@ -91,7 +91,7 @@ const {
         );
   
         const categoryEmbed = new EmbedBuilder()
-          .setColor('#ff5151')
+          .setColor('#fcb56d')
           .setTitle(`${formatString(directory)} comandos`)
           .setDescription(
             `Lista de comandos del directorio ${directory}`
